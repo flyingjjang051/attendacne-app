@@ -28,9 +28,26 @@ export const deleteStudent = (id) => {
     payload: { id },
   };
 };
+export const checkStudent = (id) => {
+  return {
+    type: ACTION_TYPES.CHECK,
+    payload: { id },
+  };
+};
 const attendacne = (state = initState, action) => {
   console.log("action===", action);
   switch (action.type) {
+    case ACTION_TYPES.CHECK: {
+      return {
+        count: state.count,
+        students: state.students.map((item, idx) => {
+          if (item.id === action.payload.id) {
+            return { ...item, isHere: !item.isHere };
+          }
+          return item;
+        }),
+      };
+    }
     case ACTION_TYPES.DELETE: {
       return {
         count: state.count - 1,

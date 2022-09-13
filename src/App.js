@@ -34,7 +34,11 @@ function App() {
           className="btn"
           onClick={() => {
             //console.log("aa");
-            dispatch(addStudents(Math.random(), name));
+            //dispatch(addStudents(Math.random(), name));
+            dispatch({
+              type: "add",
+              payload: { id: Math.random(), name: name },
+            });
           }}
         >
           ADD
@@ -43,7 +47,7 @@ function App() {
       <div className="studentList">
         <ul>
           {students.map((item, idx) => {
-            return <Student name={item.name} id={item.id} />;
+            return <Student name={item.name} id={item.id} isHere={item.isHere} />;
           })}
         </ul>
       </div>
