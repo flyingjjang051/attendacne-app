@@ -94,6 +94,70 @@ li {
   margin: 50px auto;
 }
 
+.total {
+  color: #fff;
+  text-align: left;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.inputBox {
+  display: flex;
+}
+.inputBox button {
+  padding: 0 30px;
+  background-color: rgb(15, 103, 218);
+  color: #fff;
+  margin-left: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+
+.studentList {
+  margin-top: 80px;
+}
+.studentList ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px dotted #fff;
+}
+.studentList ul li .name {
+  padding-left: 20px;
+  position: relative;
+  cursor: pointer;
+}
+.studentList ul li .name.isHere:before {
+  width: 100%;
+}
+.studentList ul li .name:before {
+  transition: all 0.25s ease;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 100px;
+  background-color: rgb(218, 15, 15);
+  left: 10px;
+  top: 55%;
+  transform: translateY(-50%);
+}
+.studentList ul li button {
+  padding: 0 30px;
+  background-color: rgb(15, 103, 218);
+  color: #fff;
+  margin-left: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  height: 50px;
+}
+
 input,
 textarea,
 select {
@@ -102,6 +166,8 @@ select {
   border-radius: 5px;
   background-color: #fff;
   padding: 0 20px;
+  outline: none;
+  border: none;
 }
 input:focus,
 textarea:focus,
@@ -144,92 +210,6 @@ label {
   font-weight: 700;
   overflow: hidden;
   text-shadow: 1px 1px 0px #0c50aa ,2px 2px 0px #0c50aa ,3px 3px 0px #0c50aa ,4px 4px 0px #0c50aa ,5px 5px 0px #0c50aa ,6px 6px 0px #0c50aa ,7px 7px 0px #0c50aa ,8px 8px 0px #0c50aa ,9px 9px 0px #0c50aa ,10px 10px 0px #0c50aa ,11px 11px 0px #0c50aa ,12px 12px 0px #0c50aa ,13px 13px 0px #0c50aa ,14px 14px 0px #0c50aa ,15px 15px 0px #0c50aa ,16px 16px 0px #0c50aa ,17px 17px 0px #0c50aa ,18px 18px 0px #0c50aa ,19px 19px 0px #0c50aa ,20px 20px 0px #0c50aa ,21px 21px 0px #0c50aa ,22px 22px 0px #0c50aa ,23px 23px 0px #0c50aa ,24px 24px 0px #0c50aa ,25px 25px 0px #0c50aa ,26px 26px 0px #0c50aa ,27px 27px 0px #0c50aa ,28px 28px 0px #0c50aa ,29px 29px 0px #0c50aa ,30px 30px 0px #0c50aa ,31px 31px 0px #0c50aa ,32px 32px 0px #0c50aa ,33px 33px 0px #0c50aa ,34px 34px 0px #0c50aa ,35px 35px 0px #0c50aa ,36px 36px 0px #0c50aa ,37px 37px 0px #0c50aa ,38px 38px 0px #0c50aa ,40px 40px 0px #0c50aa;
-}
-
-.diaryItem textarea {
-  height: 100px;
-}
-
-.section {
-  text-align: left;
-  color: #fff;
-}
-
-.contents {
-  text-align: left;
-}
-
-.infoBox {
-  background-color: #f8f8f8;
-  border-radius: 10px;
-  margin: 20px auto;
-  padding: 20px;
-  width: 800px;
-}
-.infoBox dl {
-  display: flex;
-  align-items: center;
-}
-.infoBox dl dd {
-  margin-left: 5px;
-  transform: translateY(2px);
-}
-
-.diaryList .titleBox {
-  color: #fff;
-  margin: 50px 0;
-  padding-top: 50px;
-  border-top: 1px dashed #fff;
-}
-.diaryList .titleBox h2 {
-  font-size: 32px;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-.diaryList .titleBox .total {
-  text-align: right;
-}
-.diaryList .list li {
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-.diaryList .list li .info {
-  display: flex;
-  position: relative;
-}
-.diaryList .list li dl {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
-}
-.diaryList .list li dl dd {
-  margin-left: 5px;
-}
-.diaryList .list li .btns {
-  position: absolute;
-  right: 0;
-  top: 0;
-  margin-top: -5px;
-}
-.diaryList .list li .btns .btn {
-  border-radius: 5px;
-  padding: 5px;
-  margin-left: 5px;
-}
-.diaryList .list li .btns .confirm {
-  background-color: rgb(218, 15, 15);
-  text-shadow: 1px 1px 0px #aa0c0c ,2px 2px 0px #aa0c0c ,3px 3px 0px #aa0c0c ,4px 4px 0px #aa0c0c ,5px 5px 0px #aa0c0c ,6px 6px 0px #aa0c0c ,7px 7px 0px #aa0c0c ,8px 8px 0px #aa0c0c ,9px 9px 0px #aa0c0c ,10px 10px 0px #aa0c0c ,11px 11px 0px #aa0c0c ,12px 12px 0px #aa0c0c ,13px 13px 0px #aa0c0c ,14px 14px 0px #aa0c0c ,15px 15px 0px #aa0c0c ,16px 16px 0px #aa0c0c ,17px 17px 0px #aa0c0c ,18px 18px 0px #aa0c0c ,19px 19px 0px #aa0c0c ,20px 20px 0px #aa0c0c ,21px 21px 0px #aa0c0c ,22px 22px 0px #aa0c0c ,23px 23px 0px #aa0c0c ,24px 24px 0px #aa0c0c ,25px 25px 0px #aa0c0c ,26px 26px 0px #aa0c0c ,27px 27px 0px #aa0c0c ,28px 28px 0px #aa0c0c ,30px 30px 0px #aa0c0c;
-}
-.diaryList .list li .contents {
-  margin-top: 20px;
-  font-weight: 500;
-  font-size: 18px;
-  padding-top: 20px;
-  border-top: 1px dashed #d9d9d9;
-  white-space: pre-wrap;
 }
 
 #footer {

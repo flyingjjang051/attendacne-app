@@ -14,17 +14,15 @@ export default function Student({ name, id, isHere }) {
       >
         {name}
       </div>
-      <div className="btns">
-        <button
-          className="btn btnDelete"
-          onClick={() => {
-            dispatch(deleteStudent(id));
-            //dispatch({ type: "delete", payload: { id: id } });
-          }}
-        >
-          DELETE
-        </button>
-      </div>
+      <button
+        className="btn btnDelete"
+        onClick={() => {
+          dispatch(deleteStudent(id));
+          //dispatch({ type: "delete", payload: { id: id } });
+        }}
+      >
+        DELETE
+      </button>
     </li>
   );
 }
